@@ -1,0 +1,73 @@
+﻿@model LoginTestDemo.Models.tblSkill
+
+@{
+    ViewBag.Title = "User_Data_Entry";
+}
+
+<h2>User_Data_Entry</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>tblSkill</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.Label("Skill", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.skName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.skName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Experience", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.skExperience, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.skExperience, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Previous Projects ", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.skPrevProjects, htmlAttributes: new { @class = "form-control", @rows = 5, @cols = 30 })
+            @Html.ValidationMessageFor(model => model.skPrevProjects, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Current Working Project", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.skCurrentProject, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.skCurrentProject, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Select Domain ", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.skDomain, new List<SelectListItem>
+            {
+                new SelectListItem{Text="Apps",Value="Apps"},
+                new SelectListItem{Text="Cloud",Value="Cloud"},
+                new SelectListItem{Text="IoT",Value="IoT"},
+                new SelectListItem{Text="Security",Value="Security"},
+                new SelectListItem{Text="Analytics",Value="Analytics"}}, "Select Domain", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.skDomain, "", new { @class = "text-danger" })
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Add Skill" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Dashboard_Employee","Home2")
+</div>

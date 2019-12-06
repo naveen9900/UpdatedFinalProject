@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="final_testModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblLogin">
+    <Key>
+      <PropertyRef Name="eLoginId" />
+    </Key>
+    <Property Name="eLoginId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="eFirstName" Type="varchar(max)" />
+    <Property Name="eLastName" Type="varchar(max)" />
+    <Property Name="eEmail" Type="varchar(max)" />
+    <Property Name="eUsername" Type="varchar(max)" />
+    <Property Name="ePassword" Type="varchar(max)" />
+    <Property Name="eConfirmPassword" Type="varchar(max)" />
+    <Property Name="Role" Type="varchar" MaxLength="20" />
+    <Property Name="OTP" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tblSkills">
+    <Key>
+      <PropertyRef Name="skId" />
+    </Key>
+    <Property Name="skId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="skName" Type="varchar(max)" />
+    <Property Name="skExperience" Type="bigint" />
+    <Property Name="skPrevProjects" Type="varchar(max)" />
+    <Property Name="skCurrentProject" Type="varchar(max)" />
+    <Property Name="skDomain" Type="varchar(max)" />
+    <Property Name="skUsername" Type="varchar(max)" />
+    <Property Name="skStatus" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="final_testModelStoreContainer">
+    <EntitySet Name="tblLogin" EntityType="Self.tblLogin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSkills" EntityType="Self.tblSkills" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

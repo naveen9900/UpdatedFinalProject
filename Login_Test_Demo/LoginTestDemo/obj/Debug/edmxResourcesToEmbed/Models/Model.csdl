@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="final_testModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="LoginEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblLogins" EntityType="final_testModel.tblLogin" />
+    <EntitySet Name="tblSkills" EntityType="final_testModel.tblSkill" />
+  </EntityContainer>
+  <EntityType Name="tblLogin">
+    <Key>
+      <PropertyRef Name="eLoginId" />
+    </Key>
+    <Property Name="eLoginId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="eFirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="eLastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="eEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="eUsername" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ePassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="eConfirmPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OTP" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblSkill">
+    <Key>
+      <PropertyRef Name="skId" />
+    </Key>
+    <Property Name="skId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="skName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="skExperience" Type="Int64" />
+    <Property Name="skPrevProjects" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="skCurrentProject" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="skDomain" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="skUsername" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="skStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

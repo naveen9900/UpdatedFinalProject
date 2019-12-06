@@ -1,0 +1,79 @@
+﻿@model IEnumerable<LoginTestDemo.Models.tblSkill>
+
+@{
+    ViewBag.Title = "Employee_Dashboard";
+}
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+<h2>Welcome @Session["eFirstName"]</h2>
+
+<p>
+    @Html.ActionLink("Add Skill", "User_Data_Entry","Home") |
+    @Html.ActionLink("Sign Out","SignOut","Home")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Name")
+        </th>
+        <th>
+            @Html.DisplayName("Experience(In Months)")
+        </th>
+        <th>
+            @Html.DisplayName("Previous Projects")
+        </th>
+        <th>
+            @Html.DisplayName("Current Projects")
+        </th>
+        <th>
+            @Html.DisplayName("Domain")
+        </th>
+        <th>
+            @Html.DisplayName("Status")
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.skName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.skExperience)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.skPrevProjects)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.skCurrentProject)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.skDomain)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.skStatus)
+    </td>
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.skId }) |
+
+        @Html.ActionLink("Delete", "Delete", new { id = item.skId })
+    </td>
+</tr>
+}
+
+</table>
+<script>
+    (function () {
+        if (window.localStorage) {
+            if (!localStorage.getItem('firstLoad')) {
+                localStorage['firstLoad'] = true;
+                window.location.reload();
+            }
+            else
+                localStorage.removeItem('firstLoad');
+        }
+    })();
+
+</script>

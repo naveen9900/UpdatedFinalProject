@@ -1,0 +1,127 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<div class="jumbotron">
+        <h1>Project Funding Application</h1>
+        <p class="lead">Turn your ideas into reality, get funded now!</p>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Get Funded!</h2>
+            <p style="text-align:justify">
+                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                enables a clean separation of concerns and gives you full control over markup
+                for enjoyable, agile development.
+            </p>
+
+            @Html.ActionLink("Start Now", "Login", "Home")
+        </div>
+
+
+
+        <div class="col-md-4">
+            <h2>Browse Ideas!</h2>
+            <p style="text-align:justify">
+                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries
+                and tools in Visual Studio projects.
+            </p>
+
+            @Html.ActionLink("Explore Now", "Login", "Home")
+        </div>
+
+    </div>*@
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+<body style="background-color:black">
+    @*<div class="container-fluid content-row">*@
+    <div>
+        <h4 style="text-align:center;font-size:50px;color:white">DXC Skill Portal</h4>
+        @Html.ActionLink("Explore Now", "Login", "Home")
+    </div>
+
+        <div id="imageCarousel" class="carousel slide" data-interval="2000"
+             data-ride="carousel" data-pause="hover" data-wrap="true" style="width:100%">
+            <ol class="carousel-indicators">
+                <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#imageCarousel" data-slide-to="1"></li>
+                <li data-target="#imageCarousel" data-slide-to="2"></li>
+                @*<li data-target="#imageCarousel" data-slide-to="3"></li>
+                    <li data-target="#imageCarousel" data-slide-to="3"></li>*@
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="~/Images/1.jpg" class="img-responsive"style="height:420px;width:1200px">
+                    <div class="carousel-caption">
+                        <p style="font-weight: bold; color:yellow;font-size:small"></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/Images/2.jpg" class="img-responsive" style="height:420px;width:1200px">
+                    <div class="carousel-caption">
+                        <p style="font-weight: bold; color:yellow;font-size:small"></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/Images/3.jpg" class="img-responsive"  style="height:420px;width:1200px">
+                    <div class="carousel-caption">
+                        <p style="font-weight: bold; color:yellow;font-size:small"></p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    </div>
+
+
+
+    @*<div class="row">
+            <div class="col-md-4">
+                <div class="card shadow p-3 mb-5 bg-white rounded h-100" id="a" style="width: 50rem;  background-color:white">
+
+                    <img src="~/Images/Funding.jpg" width="480" height="180" class="card-img-top" alt="..." style="border-radius:10px;">
+                    <div class="card-body">
+                        <h2 class="card-title" style="color:black">GET FUNDED!!</h2>
+                        <p class="card-text" style="text-align:justify; color:black">
+                            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                            enables a clean separation of concerns and gives you full control over markup
+                            for enjoyable, agile development.
+                        <p>
+                            @Html.ActionLink("Start Now", "Login_Idea", "Home", new { @style = "text-transform:capitalize; text-decoration:none" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-4" style="margin-bottom:70px;">
+                <div class="card shadow p-3 mb-5 bg-white rounded" id="a" style="width: 50rem;  background-color:white; height:360px">
+                    <img src="~/Images/ideas1.png" width="480" height="180" class="card-img-top" alt="..." style="border-radius:10px;">
+                    <div class="card-body">
+                        <h2 class="card-title" style="color:black">BROWSE IDEAS!!</h2>
+                        <p class="card-text" style="text-align:justify; color:black">
+                            NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries
+                            and tools in Visual Studio projects.
+                        <p>
+                            @Html.ActionLink("Explore Now", "Login_Funder", "Home", new { @style = "text-transform:capitalize; text-decoration:none" })
+                    </div>
+                </div>
+            </div>
+
+        </div>*@
+    
+
+</body>

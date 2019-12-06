@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="final_testModelStoreContainer" CdmEntityContainer="LoginEntities">
+    <EntitySetMapping Name="tblLogins">
+      <EntityTypeMapping TypeName="final_testModel.tblLogin">
+        <MappingFragment StoreEntitySet="tblLogin">
+          <ScalarProperty Name="OTP" ColumnName="OTP" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="eConfirmPassword" ColumnName="eConfirmPassword" />
+          <ScalarProperty Name="ePassword" ColumnName="ePassword" />
+          <ScalarProperty Name="eUsername" ColumnName="eUsername" />
+          <ScalarProperty Name="eEmail" ColumnName="eEmail" />
+          <ScalarProperty Name="eLastName" ColumnName="eLastName" />
+          <ScalarProperty Name="eFirstName" ColumnName="eFirstName" />
+          <ScalarProperty Name="eLoginId" ColumnName="eLoginId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSkills">
+      <EntityTypeMapping TypeName="final_testModel.tblSkill">
+        <MappingFragment StoreEntitySet="tblSkills">
+          <ScalarProperty Name="skStatus" ColumnName="skStatus" />
+          <ScalarProperty Name="skUsername" ColumnName="skUsername" />
+          <ScalarProperty Name="skDomain" ColumnName="skDomain" />
+          <ScalarProperty Name="skCurrentProject" ColumnName="skCurrentProject" />
+          <ScalarProperty Name="skPrevProjects" ColumnName="skPrevProjects" />
+          <ScalarProperty Name="skExperience" ColumnName="skExperience" />
+          <ScalarProperty Name="skName" ColumnName="skName" />
+          <ScalarProperty Name="skId" ColumnName="skId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

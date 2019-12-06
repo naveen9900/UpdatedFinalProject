@@ -1,0 +1,63 @@
+﻿@model IEnumerable<LoginTestDemo.Models.tblSkill>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.skName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.skExperience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.skPrevProjects)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.skCurrentProject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.skDomain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.skUsername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.skStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.skName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.skExperience)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.skPrevProjects)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.skCurrentProject)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.skDomain)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.skUsername)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.skStatus)
+    </td>
+    <td>
+        @if (item.skStatus == "Pending")
+        {
+            @Html.ActionLink("Intrested", "Approve", new { id = item.skId })
+        }
+    </td>
+
+</tr>
+}
+
+</table>

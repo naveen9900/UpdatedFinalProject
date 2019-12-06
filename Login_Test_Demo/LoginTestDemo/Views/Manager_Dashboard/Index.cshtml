@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Welcome To DashBoard</h2>
+
+<div style="font-family:Arial">
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <h2>chapters</h2>
+
+    @Ajax.ActionLink("All", "All",
+        new AjaxOptions
+        {
+          HttpMethod = "GET", // HttpMethod to use, GET or POST
+          UpdateTargetId = "divchapters", // ID of the HTML element to update
+          InsertionMode = InsertionMode.Replace // Replace the existing contents
+        })
+
+    <span style="color:Blue">|</span>
+
+    @Ajax.ActionLink("Apps", "AllApps",
+        new AjaxOptions
+        {
+          HttpMethod = "GET", // HttpMethod to use, GET or POST
+          UpdateTargetId = "divchapters", // ID of the HTML element to update
+          InsertionMode = InsertionMode.Replace // Replace the existing contents
+        })
+
+    <span style="color:Blue">|</span>
+
+    @Ajax.ActionLink("Cloud", "AllCloud",
+        new AjaxOptions
+        {
+          HttpMethod = "GET", // HttpMethod to use, GET or POST
+          UpdateTargetId = "divchapters", // ID of the HTML element to update
+          InsertionMode = InsertionMode.Replace // Replace the existing contents
+        })
+
+    <span style="color:Blue">|</span>
+
+    @Ajax.ActionLink("IoT", "AllIoT",
+        new AjaxOptions
+        {
+          HttpMethod = "GET", // HttpMethod to use, GET or POST
+          UpdateTargetId = "divchapters", // ID of the HTML element to update
+          InsertionMode = InsertionMode.Replace // Replace the existing contents
+        })
+
+
+    <span style="color:Blue">|</span>
+
+    @Ajax.ActionLink("Security", "AllSecurity",
+        new AjaxOptions
+        {
+          HttpMethod = "GET", // HttpMethod to use, GET or POST
+          UpdateTargetId = "divchapters", // ID of the HTML element to update
+          InsertionMode = InsertionMode.Replace // Replace the existing contents
+        })
+
+    <span style="color:Blue">|</span>
+
+    @Ajax.ActionLink("Analytics", "AllAnalytics",
+        new AjaxOptions
+        {
+          HttpMethod = "GET", // HttpMethod to use, GET or POST
+          UpdateTargetId = "divchapters", // ID of the HTML element to update
+          InsertionMode = InsertionMode.Replace // Replace the existing contents
+        })
+
+    <br /><br />
+
+</div>
+<div id="divchapters">
+</div>

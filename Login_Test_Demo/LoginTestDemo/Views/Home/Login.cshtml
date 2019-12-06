@@ -1,0 +1,45 @@
+﻿@model LoginTestDemo.Models.tblLogin
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.Label("Username: ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.eUsername, new { htmlAttributes = new { @class = "form-control", data_val = "false" } })
+                @*@Html.ValidationMessageFor(model => model.eUsername, "", new { @class = "text-danger" })*@
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Password: ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.ePassword, new{ @class = "form-control",data_val = "false" }   )
+                @*@Html.ValidationMessageFor(model => model.ePassword, "", new { @class = "text-danger" })*@
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-left:5%">
+            <div class="col-md-offset-1 col-md-10">
+                <input type="submit" value="Login" class="btn btn-default" />
+                @Html.ActionLink("Register", "Register", "Home", new { @class = "btn btn-default" })
+            </div>
+            @Html.ActionLink("Forgot Password", "ForgotPassword", "ResetPassword",null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+}
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
